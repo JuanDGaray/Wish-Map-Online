@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mapa de Sueños</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+</head>
+<body id="main">
+    <div class="insert-image-caontainer deactive" id="insert-image-caontainer">
+        <section class="section-inserted">
+            <div>
+                <button class="exit" id="exit-button">x</button>
+                <input type="imageURL" placeholder="Url de la imagen" id="UrlImg">
+                
+            </div>
+            <!-- <span>- o - </span>
+            <button class="button-insert">Subir imagen</button> -->
+            <button class="button-sbmt" id="button-sbmt">insertar</button>
+        </section>
+    </div>
+    <aside class="tools off-tools" id="Tool-container">
+        <div class="toggle-container">
+            <button class="toggle-button" id="Tooltoggle-button">
+                <svg width="24px" height="24px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01"/>
+                    <path d="M44 16C44 22.6274 38.6274 28 32 28C29.9733 28 28.0639 27.4975 26.3896 26.6104L9 44L4 39L21.3896 21.6104C20.5025 19.9361 20 18.0267 20 16C20 9.37258 25.3726 4 32 4C34.0267 4 35.9361 4.50245 37.6104 5.38959L30 13L35 18L42.6104 10.3896C43.4975 12.0639 44 13.9733 44 16Z" fill="#2F88FF" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </button>
+        </div>
+        <div class="tools-main">
+            <button class="add-image" id="add-image">+</button>
+
+            <div class="PrimaryTools">
+                <h3 class="title_tool">Herramientas</h1>
+                <section class="tool-actions">
+                    <div class="button_container">
+                        <button type="button">Imprimir</button>
+                        <button type="button" id="downloadButton">Descargar</button>
+                        <button type="button">Guardar</button>
+                        <button type="button">Cargar</button>
+                    </div>
+                </section>
+            </div>
+            <div class="SecondTools">
+                <h3 class="title_tool">Stikers</h1>
+                <section class="tool-stikers" id="tool-stikers">
+                    <div class="imagen-contenedor tool-objet">
+                        <img src="./assets/stiker1.png" alt="Imagen arrastrable" class="stiker">
+                        <div class="control-punto escalar disable" id="edit-tool1"></div>
+                        <div class="control-punto rotar disable" id="edit-tool2"></div>
+                    </div>
+                    <div class="imagen-contenedor tool-objet">
+                        <img src="./assets/stiker2.png" alt="Imagen arrastrable" class="stiker">
+                        <div class="control-punto escalar disable" id="edit-tool1"></div>
+                        <div class="control-punto rotar disable" id="edit-tool2"></div>
+                    </div>
+                    <div class="imagen-contenedor tool-objet">
+                        <img src="./assets/stiker3.png" alt="Imagen arrastrable" class="stiker">
+                        <div class="control-punto escalar disable" id="edit-tool1"></div>
+                        <div class="control-punto rotar disable" id="edit-tool2"></div>
+                    </div>
+                    <div class="imagen-contenedor tool-objet">
+                        <img src="./assets/stiker4.png" alt="Imagen arrastrable" class="stiker">
+                        <div class="control-punto escalar disable" id="edit-tool1"></div>
+                        <div class="control-punto rotar disable" id="edit-tool2"></div>
+                    </div>
+                    <div class="imagen-contenedor tool-objet">
+                        <img src="./assets/stiker5.png" alt="Imagen arrastrable" class="stiker">
+                        <div class="control-punto escalar disable" id="edit-tool1"></div>
+                        <div class="control-punto rotar disable" id="edit-tool2"></div>
+                    </div>
+                    <div class="imagen-contenedor tool-objet">
+                        <img src="./assets/stiker6.png" alt="Imagen arrastrable" class="stiker">
+                        <div class="control-punto escalar disable" id="edit-tool1"></div>
+                        <div class="control-punto rotar disable" id="edit-tool2"></div>
+                    </div>
+                    <div class="imagen-contenedor tool-objet">
+                        <img src="./assets/stiker7.png" alt="Imagen arrastrable" class="stiker">
+                        <div class="control-punto escalar disable" id="edit-tool1"></div>
+                        <div class="control-punto rotar disable" id="edit-tool2"></div>
+                    </div>
+                    <div class="imagen-contenedor tool-objet">
+                        <img src="./assets/stiker8.png" alt="Imagen arrastrable" class="stiker">
+                        <div class="control-punto escalar disable" id="edit-tool1"></div>
+                        <div class="control-punto rotar disable" id="edit-tool2"></div>
+                    </div>
+                    <div class="imagen-contenedor tool-objet">
+                        <img src="./assets/stiker10.png" alt="Imagen arrastrable" class="stiker">
+                        <div class="control-punto escalar disable" id="edit-tool1"></div>
+                        <div class="control-punto rotar disable" id="edit-tool2"></div>
+                    </div>
+                    <div class="imagen-contenedor tool-objet">
+                        <img src="./assets/stiker11.png" alt="Imagen arrastrable" class="stiker">
+                        <div class="control-punto escalar disable" id="edit-tool1"></div>
+                        <div class="control-punto rotar disable" id="edit-tool2"></div>
+                    </div>
+                    <div class="imagen-contenedor tool-objet">
+                        <img src="./assets/stiker12.png" alt="Imagen arrastrable" class="stiker">
+                        <div class="control-punto escalar disable" id="edit-tool1"></div>
+                        <div class="control-punto rotar disable" id="edit-tool2"></div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+        
+    </aside>
+    <section >
+    <header>
+        <aside class="infoPrimary-container">
+            <div class="photo-container" id="photo-container">
+                +
+            </div>
+            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+            <div class="info-container">
+                <input type="text" placeholder="Tu nombre">
+                <input type="text" placeholder="Tu apellido">
+            </div>
+        </aside>
+        <aside class="titlePage-container">
+            <svg width="160" height="32" viewBox="0 0 80 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo">
+                <g clip-path="url(#clip0)">
+                <path d="M37.2206 7.40506C37.2206 9.73004 37.2136 12.055 37.2275 14.38C37.2275 14.7201 37.1303 14.8172 36.7972 14.8033C36.1587 14.7825 35.5271 14.7895 34.8886 14.8033C34.6457 14.8103 34.5555 14.7201 34.5694 14.4841C34.5833 14.1024 34.5763 13.7207 34.5694 13.339C34.5694 13.2487 34.5069 13.1585 34.4792 13.0683C34.4098 13.1238 34.3195 13.1655 34.2779 13.2349C33.334 14.6229 31.9321 15.081 30.3705 15.074C27.3724 15.0532 25.3319 13.1724 24.8114 10.431C24.5338 8.95967 24.631 7.50222 25.2764 6.12806C26.1786 4.20561 27.6708 3.10212 29.8153 2.90779C31.1826 2.78981 32.4318 3.0813 33.5284 3.928C33.7296 4.08069 33.8962 4.28196 34.0836 4.44852C34.153 4.51098 34.2432 4.55957 34.3265 4.61509C34.3542 4.51098 34.4236 4.40688 34.4236 4.30278C34.4306 3.03271 34.4306 1.75571 34.4306 0.48565C34.4306 0.00677416 34.4306 0.00677419 34.8956 0.00677419C35.541 0.00677419 36.1934 0.0206546 36.8388 -0.000166044C37.1512 -0.0140465 37.2275 0.0969971 37.2275 0.395427C37.2136 2.73428 37.2206 5.0662 37.2206 7.40506ZM34.5069 8.98049C34.5069 6.9123 33.0217 5.37851 31.0299 5.35769C29.1282 5.34381 27.4557 6.73186 27.4695 8.97355C27.4834 11.2361 29.1699 12.5617 30.9952 12.5617C33.0009 12.5617 34.5 11.0348 34.5069 8.98049Z" fill="#3560EE"></path>
+                <path d="M79.9933 7.43999C79.9933 9.73027 79.9933 12.0205 79.9933 14.3108C79.9933 14.7966 79.9933 14.7966 79.4936 14.7966C78.9176 14.7966 78.3346 14.7828 77.7586 14.8036C77.481 14.8105 77.3561 14.7272 77.3699 14.4357C77.3908 14.054 77.3769 13.6723 77.3699 13.2906C77.3699 13.2143 77.3075 13.1379 77.2658 13.0546C77.2034 13.0963 77.1201 13.131 77.0784 13.1865C76.2664 14.4288 75.0519 14.9216 73.643 15.0326C71.8802 15.1714 70.3256 14.6856 69.0764 13.4016C68.1949 12.4994 67.73 11.389 67.5495 10.1606C67.3482 8.81416 67.4385 7.48164 68.0145 6.22545C68.9167 4.24749 70.4158 3.08847 72.6228 2.90108C73.8374 2.79698 74.9686 3.01213 75.9888 3.69227C76.3011 3.90048 76.5649 4.19197 76.8564 4.43488C76.9396 4.50428 77.0368 4.54592 77.134 4.60144C77.1687 4.49734 77.2311 4.39323 77.2311 4.28219C77.245 3.78249 77.2381 3.28974 77.2381 2.79004C77.2381 1.97803 77.245 1.17297 77.2311 0.360962C77.2242 0.0902928 77.3144 -0.0068704 77.592 6.98247e-05C78.2652 0.0139503 78.9315 0.0208905 79.6047 6.98247e-05C79.9101 -0.0068704 80.0003 0.097233 80.0003 0.395663C79.9864 2.7484 79.9933 5.0942 79.9933 7.43999ZM73.768 12.5619C75.7806 12.5688 77.3213 11.0073 77.3213 8.9599C77.3213 6.92642 75.7876 5.36487 73.8027 5.35793C71.79 5.35793 70.2701 6.89172 70.2631 8.9252C70.2493 11.0073 71.7483 12.5619 73.768 12.5619Z" fill="#3560EE"></path>
+                <path d="M0.00694023 7.39815C0.00694023 5.07317 0.0138805 2.7482 0 0.423221C0 0.0831497 0.104103 -0.0140135 0.430294 -0.00013304C1.07574 0.0206876 1.72812 0.0206876 2.37356 -0.00013304C2.70669 -0.0140135 2.81079 0.0831497 2.80385 0.423221C2.78997 2.72738 2.79691 5.02459 2.79691 7.32875C2.79691 7.41897 2.78997 7.51613 2.79691 7.60636C2.81079 7.7174 2.84549 7.8215 2.87325 7.92561C2.96348 7.87009 3.07452 7.82844 3.15086 7.7521C4.24742 6.5792 5.35786 5.41325 6.43359 4.21953C7.37746 3.17849 7.36358 3.16461 8.74469 3.16461C9.38319 3.16461 10.0147 3.16461 10.6532 3.16461C10.7365 3.16461 10.8198 3.20625 10.9031 3.22707C10.8545 3.28954 10.8129 3.35894 10.7574 3.41446C9.27908 4.97601 7.80776 6.5445 6.32255 8.09911C6.10046 8.32814 6.07964 8.47389 6.29479 8.73067C7.93962 10.6739 9.56363 12.6311 11.1946 14.5813C11.2362 14.6299 11.264 14.6923 11.2987 14.7479C11.2362 14.7617 11.1668 14.7826 11.1044 14.7826C10.0425 14.7826 8.97371 14.7964 7.91186 14.7687C7.74529 14.7617 7.53015 14.616 7.4191 14.4702C6.05188 12.7352 4.69853 10.9932 3.33825 9.25119C3.20639 9.08463 3.03982 8.9597 2.88713 8.81396C2.85937 9.02216 2.80385 9.23037 2.80385 9.43858C2.79691 11.0487 2.79691 12.6519 2.79691 14.262C2.79691 14.7826 2.79691 14.7826 2.26251 14.7826C1.63789 14.7826 1.01327 14.7687 0.388653 14.7895C0.0832827 14.8173 0 14.7132 0 14.4078C0.0138805 12.0689 0.00694023 9.73701 0.00694023 7.39815Z" fill="#3560EE"></path>
+                <path d="M23.312 9.00154C23.3328 12.2565 20.9523 14.7897 17.6557 15.0257C16.2191 15.1298 14.8657 14.9146 13.6165 14.1928C11.8467 13.1726 10.889 11.5972 10.7085 9.57758C10.5489 7.80782 10.9931 6.20462 12.2007 4.85822C13.1862 3.76166 14.4493 3.1648 15.879 2.94966C17.4406 2.71369 18.9605 2.90108 20.3416 3.6992C22.2154 4.78188 23.2009 6.43365 23.2981 8.599C23.2981 8.72393 23.305 8.84191 23.312 9.00154ZM13.4846 8.94601C13.4846 11.0142 14.9698 12.5549 16.9686 12.5619C18.9882 12.5688 20.529 11.0281 20.5428 8.98072C20.5567 6.94723 19.009 5.3718 16.9964 5.36486C14.9907 5.36486 13.4846 6.89865 13.4846 8.94601Z" fill="#3560EE"></path>
+                <path d="M54.0363 10.7431C54.0363 11.9577 54.0294 13.1722 54.0432 14.3868C54.0502 14.6991 53.96 14.8171 53.6338 14.8032C53.0785 14.7754 52.5233 14.7754 51.9681 14.8032C51.635 14.8171 51.5448 14.6921 51.5656 14.3798C51.5864 14.0675 51.5725 13.7552 51.5656 13.4429C51.5656 13.3596 51.5101 13.2763 51.4823 13.193C51.406 13.2347 51.3088 13.2555 51.2602 13.318C50.4274 14.5325 49.2059 15.0253 47.804 15.053C46.2563 15.0808 44.8475 14.6991 43.8966 13.311C43.1332 12.1937 43.1957 9.8895 44.7711 8.81376C45.6664 8.20302 46.6658 7.89071 47.7207 7.78661C48.8242 7.67557 49.9346 7.66168 51.0381 7.6131C51.5517 7.59228 51.6072 7.52982 51.5656 7.0093C51.4407 5.6282 50.4204 5.05216 49.192 4.94112C47.9567 4.83701 46.8324 5.1632 45.8538 5.93357C45.7774 5.98909 45.5762 5.98909 45.5137 5.93357C45.1251 5.57268 44.7572 5.18402 44.3755 4.81619C44.202 4.64963 44.3339 4.5594 44.4449 4.4553C45.1528 3.8168 45.9787 3.3865 46.9018 3.15054C48.38 2.77576 49.8652 2.70636 51.3435 3.1783C52.9328 3.69187 53.8142 4.83701 53.96 6.46797C54.0849 7.88377 54.0571 9.30652 54.0918 10.7293C54.0641 10.7431 54.0502 10.7431 54.0363 10.7431ZM50.2192 9.52167C50.2192 9.51473 50.2192 9.50779 50.2192 9.49391C49.7611 9.52861 49.2961 9.54249 48.8381 9.59801C48.151 9.68823 47.4709 9.82704 46.874 10.2157C46.5478 10.4239 46.3257 10.7015 46.2494 11.0902C46.0898 11.8397 46.5131 12.5754 47.3459 12.8113C47.8317 12.9501 48.3731 12.9848 48.8797 12.9571C49.8722 12.9016 50.6842 12.499 51.1284 11.5343C51.3921 10.9583 51.3921 10.3476 51.3574 9.72987C51.3504 9.65353 51.2116 9.52861 51.1214 9.52167C50.823 9.50779 50.5176 9.52167 50.2192 9.52167Z" fill="#3560EE"></path>
+                <path d="M55.5079 8.98737C55.5079 7.20373 55.5079 5.42703 55.5079 3.64339C55.5079 3.18534 55.5149 3.17146 55.9729 3.17146C56.5628 3.17146 57.1528 3.18534 57.7427 3.16452C58.055 3.15758 58.1521 3.27556 58.1383 3.57399C58.1174 3.921 58.1244 4.26801 58.1383 4.61503C58.1452 4.73995 58.2077 4.86487 58.2424 4.9898C58.3257 4.89958 58.4228 4.82323 58.4853 4.72607C59.0336 3.8516 59.7415 3.1784 60.7894 2.97713C62.5523 2.63012 64.5025 3.03959 65.481 4.74689C65.9391 5.53808 66.0779 6.41949 66.0848 7.31477C66.1057 9.68833 66.0848 12.0549 66.0987 14.4285C66.0987 14.7131 66.0154 14.8102 65.724 14.8033C65.0785 14.7825 64.4261 14.7963 63.7807 14.7963C63.3018 14.7963 63.3018 14.7963 63.3018 14.3313C63.3018 12.402 63.3157 10.4656 63.2879 8.53625C63.281 7.95328 63.1908 7.35642 63.0242 6.8012C62.698 5.7324 61.7819 5.21189 60.6715 5.38539C59.2348 5.60748 58.3465 6.60687 58.3257 8.07126C58.2979 10.1603 58.284 12.2562 58.284 14.3452C58.284 14.6853 58.2007 14.8172 57.8398 14.8033C57.1944 14.7755 56.542 14.7825 55.8966 14.8033C55.5843 14.8102 55.501 14.6922 55.501 14.4007C55.5149 12.5963 55.5079 10.7918 55.5079 8.98737Z" fill="#3560EE"></path>
+                <path d="M42.0856 7.39801C42.0856 9.72299 42.0787 12.041 42.0925 14.366C42.0925 14.6922 42.0162 14.8171 41.6692 14.8032C40.989 14.7755 40.3089 14.7894 39.6218 14.8032C39.3581 14.8102 39.2817 14.713 39.2817 14.4632C39.2887 9.75769 39.2887 5.05221 39.2817 0.353678C39.2817 0.0621885 39.3928 -0.000273567 39.6496 0.00666666C40.3297 0.0205471 41.0168 0.0274873 41.6969 0.00666666C42.0023 -0.000273567 42.0925 0.0968896 42.0925 0.40226C42.0787 2.72724 42.0856 5.06609 42.0856 7.39801Z" fill="#3560EE"></path>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <rect width="80" height="15.0603" fill="white"></rect>
+                </clipPath>
+                </defs>
+                </svg>
+            <h1>Mapa de Sueños</h1>
+        </aside>
+    </header>
+    <main>
+        <aside class="layouts-containers">
+            <div class="layout-container">
+                <h4 class="layout-title">Comunidad</h4>
+                <div class="layout-stikers">
+
+                </div>
+            </div>
+            <div class="layout-container">
+                <h4 class="layout-title">Habilidad</h4>
+                <div class="layout-stikers">
+
+                </div>
+            </div>
+            <div class="layout-container">
+                <h4 class="layout-title">Desempeño académico</h4>
+                <div class="layout-stikers">
+
+                </div>
+            </div>
+            <div class="layout-container">
+                <h4 class="layout-title">Desarrollo de proyectos</h4>
+                <div class="layout-stikers">
+
+                </div>
+            </div>
+            <div class="layout-container">
+                <h4 class="layout-title">Crecimiento personal</h4>
+                <div class="layout-stikers">
+
+                </div>
+            </div>
+            <div class="layout-container">
+                <h4 class="layout-title">Futuro</h4>
+                <div class="layout-stikers">
+
+                </div>
+            </div>
+        </aside>
+    </main>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>

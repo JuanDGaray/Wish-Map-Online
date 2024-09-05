@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrastrar DIV</title>
+    <style>
+        #draggableDiv {
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            cursor: move;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="draggableDiv">Arrástrame</div>
+
+    <script>
+        const draggableDiv = document.getElementById("draggableDiv");
+        let offsetX, offsetY, isDragging = false;
+
+        draggableDiv.addEventListener("mousedown", function (event) {
+            isDragging = true;
+            offsetX = event.clientX - draggableDiv.offsetLeft;
+            offsetY = event.clientY - draggableDiv.offsetTop;
+        });
+
+        document.addEventListener("mousemove", function (event) {
+            if (isDragging) {
+                const x = event.clientX - offsetX;
+                const y = event.clientY - offsetY;
+                draggableDiv.style.left = x + "px";
+                draggableDiv.style.top = y + "px";
+            }
+        });
+
+        document.addEventListener("mouseup", function () {
+            isDragging = false;
+        });
+    </script>
+</body>
+</html>
